@@ -30,6 +30,25 @@ group by color, mark;
 # Вывести на экран марку авто и количество AUTO не этой марки
 SELECT MARK, (count(color) - 1) AS 'Quantity of cars' FROM AUTO
 group by MARK;
+create table test_a 
+(id_number int, 
+data varchar(1)
+);
+
+create table test_b 
+(id_number int);
+
+insert into test_a(id_number, data) values
+(10, 'A'),
+(20, 'A'),
+(30, 'F'),
+(40, 'D'),
+(50, 'C');
+
+insert into test_b(id_number) values
+(10),
+(30),
+(50);
 
 # Напишите запрос, который вернет строки из таблицы test_a, id которых нет в таблице test_b, 
 # НЕ используя ключевого слова NOT.
